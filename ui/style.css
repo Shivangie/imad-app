@@ -4,6 +4,12 @@ body {
     margin-top: 75px;
 }
 
+div {
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
 .center {
     text-align: center;
 }
