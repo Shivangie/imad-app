@@ -2,6 +2,8 @@
 <html>
     <head>
         <link href="/ui/style.css" rel="stylesheet" />
+        <script type="text/javacscript" src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body background="http://www.victoriadrivegospelhall.com/wp-content/uploads/2015/10/violet-vector-leaves-circles-backgrounds-for-powerpoint1.jpg">
        
@@ -13,9 +15,10 @@
         <div class="center">Hi. This is Shivangi.</div>
        </div>
        
-       <div class="footer">
-       This button <button id="counter">Click me!</button> has been clicked <span id="count">0 </span>times.       
-           
+       <div class="box">
+       <label for="qty"><abbr title="Quantity">Counter</abbr></label>  
+        <input id="qty" value="0"/>
+        <button id="up" onlclick="modify_qty(1)">Like!</button>
        </div>
         <script type="text/javascript" src="/ui/main.js">
         </script>
