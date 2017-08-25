@@ -1,22 +1,16 @@
 //Counter code
-
-button.onclick=function(){
+function modify_qty(val) {
+    var qty = document.getElementById('qty').value;
+    var new_qty = parseInt(qty,10) + val;
     
-    //Create a request object 
-    var request=new XMLHttpRequest();
-    //Capture the response and store it in a variable
-    request.onreadystatechange=function(){
-        if(request.readyState==XMLHttpRequest.DONE){
-            //Take some action
-            if(request.status==200)
-            var counter=request.responseText;
-                counter=counter+1;
-               var span=document.getElementById('count');
-               span.innerHTML=counter.toString();
-        }
+    if (new_qty < 0) {
+        new_qty = 0;
     }
-        //Not done yet
-    };
+    
+    document.getElementById('qty').value = new_qty;
+    return new_qty;
+}
+   
     // Make the request
     request.open('GET', 'http://http://shivanginldhs.imad.hasura-app.io/', true);
     request.send(null);
